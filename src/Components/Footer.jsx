@@ -1,8 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { BiPhone } from "react-icons/bi";
-import { CiLocationArrow1, CiLocationOn } from "react-icons/ci";
-import { GoLocation } from "react-icons/go";
 import { HiLocationMarker } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
 
