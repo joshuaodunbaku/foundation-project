@@ -4,6 +4,7 @@ import IMAGES from "../assets/images";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { CiSettings } from "react-icons/ci";
 import HeroComp from "../Components/HeroComp";
+import AnimatedCard from "../Components/AnimatedCard";
 
 const Home = () => {
   return (
@@ -116,17 +117,13 @@ const Home = () => {
             "Brendon Tailor",
             "Walshr Hasgt",
           ].map((volunteer, index) => (
-            <Col key={index} xs={12} sm={6} md={3} className="mb-4">
-              <div className="volunteer-card">
+            <Col key={index} xs={12} sm={6} md={4} lg={6} className="mb-4">
+              <AnimatedCard>
                 <div className="volunteer-img-container">
-                  <img
-                    src={IMAGES.image_2}
-                    alt={volunteer}
-                    className="volunteer-img"
-                  />
+                  <img src={IMAGES.image_2} className="volunteer-img" />
                 </div>
                 <div>
-                  <h4>{volunteer}</h4>
+                  <h4>{"volunteer"}</h4>
                   <p>Volunteer Leader</p>
                 </div>
                 <div className="btn-div d-inline-block">
@@ -137,7 +134,7 @@ const Home = () => {
                     Learn more
                   </Button>
                 </div>
-              </div>
+              </AnimatedCard>
             </Col>
           ))}
         </Row>
