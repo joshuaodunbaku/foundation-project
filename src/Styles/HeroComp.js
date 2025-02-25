@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const HeroWrapper = styled.div`
-  background-image: ${(prop) => `url(${prop.heroImage})`};
+  background-image: ${(prop) => `url(${prop.$heroImage})`};
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: ${(prop) => `${prop.height || "80vh"}`};
   width: 100%;
   position: relative;
   color: white;

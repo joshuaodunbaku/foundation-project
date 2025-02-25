@@ -15,7 +15,7 @@ import {
 const About = () => {
   return (
     <>
-      <HeroComp heroImage={IMAGES.children_2}>
+      <HeroComp $heroImage={IMAGES.children_2} $height={"30vh"}>
         <div>
           <h3 className="display-4 fw-bold">About the Organization</h3>
         </div>
@@ -124,7 +124,7 @@ const About = () => {
         <h3 className="display-6 text-center mb-4">Leadership</h3>
         <Row>
           {["CEO", "President", "Marketer", "Partner"].map((role, index) => (
-            <Col key={index} xs={12} sm={6} md={4} lg={6} className="mb-4">
+            <Col key={index} xs={12} sm={6} md={4} lg={3} className="mb-4">
               <AnimatedCard>
                 <div className="volunteer-img-container">
                   <img src={IMAGES.preg_1} className="volunteer-img" />

@@ -26,7 +26,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
-
+.word-span{
+  color: var(--primary-color);
+  font-weight: bold;
+}
   a {
     font-weight: 500;
     color: #646cff;

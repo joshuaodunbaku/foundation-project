@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { BiPhone } from "react-icons/bi";
 import { HiLocationMarker } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -28,9 +29,11 @@ const Footer = () => {
               they live in Bookmarks grove right at the coast of the Semantics,
               a large language ocean.
             </p>
-            <Button variant="link" style={{ color: "#ff6f61" }}>
-              Read More
-            </Button>
+            <Link to={"about"}>
+              <Button variant="link" style={{ color: "#ff6f61" }}>
+                Read More
+              </Button>
+            </Link>
           </Col>
 
           {/* Recent Blog Column */}
@@ -61,19 +64,20 @@ const Footer = () => {
           {/* Get Connected Column */}
           <Col md={4} className="mb-4">
             <h5>GET CONNECTED</h5>
-            <div className="d-flex flex-column gap-2">
+            <div className="d-flex flex-column align-items-center gap-2">
               <p className="d-flex gap-2">
                 <HiLocationMarker size={20} />
-                <span className="fw-bold">Address:</span> 203 Fake St. Mountain
-                View, San Francisco, California, USA
+                {/* <span className="fw-bold">Address:</span> 203 Fake St. Mountain
+                View, San Francisco, California, USA */}
+                Online
               </p>
               <p className="d-flex gap-2">
                 <BiPhone size={20} />
-                <span className="fw-bold">Phone:</span> +2 392 3929 210
+                07460716648
               </p>
               <p className="d-flex gap-2">
                 <MdEmail size={20} />
-                <span className="fw-bold">Email:</span> info@yourdomain.com
+                kiddies.mecareroot@yahoo.com
               </p>
             </div>
           </Col>

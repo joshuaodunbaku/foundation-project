@@ -5,15 +5,19 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { CiSettings } from "react-icons/ci";
 import HeroComp from "../Components/HeroComp";
 import AnimatedCard from "../Components/AnimatedCard";
+import { BiArrowToRight } from "react-icons/bi";
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <Wrapper>
-      <HeroComp heroImage={IMAGES.preg_2}>
-        <h3 className="display-3 fw-bold">Our Helping To The World</h3>
-        <p className="lead">
-          Lorem ipsum dolor sit, amet consectetur adipisicing.
-        </p>
+      <HeroComp $heroImage={IMAGES.preg_2}>
+        <h3 className="display-3 fw-bold">
+          Are You Pregnant or Have Young Children?
+        </h3>
+        <p className="lead">Join Us Today.</p>
         <div className="btn-div d-inline-block">
           <Button className="donate-btn btn-lg px-5 py-3 rounded-1">
             Donate
@@ -37,7 +41,7 @@ const Home = () => {
         </div>
       </div>
       {/*  */}
-      <div className="container mx-auto" id="section-3">
+      <div className="container mx-auto py-4" id="section-3">
         <div className="my-5 py-5 text-center mx-auto child-1">
           <h6 style={{ color: "var(--primary-color)" }}>What we are doing</h6>
           <h1 className="display-5 fw-bold">
@@ -50,14 +54,15 @@ const Home = () => {
               key={index}
               className="col-12 col-sm-6 col-md-4 d-flex justify-content-center"
             >
-              <div className="p-4 d-flex flex-column justify-content-center gap-4 text-center rounded-3">
-                {/* <div> */}
+              <div
+                className="p-4 d-flex flex-column justify-content-center gap-4 text-center rounded-3 btn"
+                onClick={() => navigate("services")}
+              >
                 <div className="p-3 rounded-circle d-inline-block icon-bg d-flex align-items-center justify-content-center mx-auto">
                   <span>
                     <CiSettings size={"50px"} />
                   </span>
                 </div>
-                {/* </div> */}
                 <h4>{header}</h4>
                 <p>
                   The sea freight service has grown conside rably in recent
@@ -67,6 +72,16 @@ const Home = () => {
             </div>
           ))}
         </div>
+        {/* <div className="text-center mt-4 mx-auto">
+          <Link className="d-inline-block" to={"about"}>
+            <Button
+              variant="outline-dark"
+              className="rounded-0 btn-lg d-flex justify-content-center align-items-center gap-2"
+            >
+              Learn More <BiArrowToRight />
+            </Button>
+          </Link>
+        </div> */}
       </div>
       {/*  */}
       <div className="my-5 text-white" id="section-4">
@@ -87,11 +102,20 @@ const Home = () => {
                   A very Lovely Welcome <br /> to our company
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Cumque, dolorum. Reprehenderit omnis totam esse sunt veniam
-                  accusamus, rem placeat fugiat consequatur ducimus voluptas
-                  repellendus tenetur, saepe veritatis suscipit quam possimus.
+                  Join us for a comprehensive support program designed
+                  specifically for parents in the Medway area facing financial
+                  challenges.
                 </p>
+                <div className="btn-div">
+                  <Link to={"about"}>
+                    <Button
+                      variant="outline-light"
+                      className="rounded-0 btn-lg d-flex justify-content-center align-items-center gap-2"
+                    >
+                      Know More About Us <BiArrowToRight />
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
