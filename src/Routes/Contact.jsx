@@ -84,7 +84,7 @@ const Contact = () => {
                 />
               </Form.Group>
               <Button
-                onClick={onSubmit}
+                onClick={handleSubmit(onSubmit)}
                 variant="outline-success"
                 className="px-4"
               >
