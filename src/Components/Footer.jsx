@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 import { BiPhone } from "react-icons/bi";
 import { HiLocationMarker } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
@@ -12,6 +12,7 @@ const Footer = () => {
       style={{
         backgroundColor: "var(--footer-bg)",
         color: "white",
+        marginTop: "50px",
       }}
     >
       <div className="container p-5 pb-0">
