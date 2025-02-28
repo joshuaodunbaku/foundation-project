@@ -29,7 +29,7 @@ const Contact = () => {
     console.log(data);
 
     const { fname, email, subject, message } = data;
-    const mailtoLink = `mailto:joshuaodunbaku@gmail.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:kiddies.mecareroot@yahoo.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(
       `Name: ${fname}\nEmail: ${email}\n\n${message}`
