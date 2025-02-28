@@ -98,21 +98,21 @@ const Contact = () => {
             <div className="d-flex align-items-center mb-3">
               <FaHome size={20} className="me-3 text-secondary" />
               <div>
-                <strong>Buttonwood, California.</strong>
-                <p className="mb-0 text-muted">Rosemead, CA 91770</p>
+                <strong>Online</strong>
+                <p className="mb-0 text-muted">Online</p>
               </div>
             </div>
             <div className="d-flex align-items-center mb-3">
               <FaPhoneAlt size={20} className="me-3 text-secondary" />
               <div>
-                <strong>+1 253 565 2365</strong>
-                <p className="mb-0 text-muted">Mon to Fri 9am to 6pm</p>
+                <strong>+44 7460 716648</strong>
+                <p className="mb-0 text-muted">Mon to Fri</p>
               </div>
             </div>
             <div className="d-flex align-items-center">
               <FaEnvelope size={20} className="me-3 text-secondary" />
               <div>
-                <strong>support@yourdomain.com</strong>
+                <strong>kiddies.mecareroot@yahoo.com</strong>
                 <p className="mb-0 text-muted">Send us your query anytime!</p>
               </div>
             </div>
