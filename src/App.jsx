@@ -9,6 +9,7 @@ import NotFound from "./Routes/NotFound.jsx";
 import Services from "./Routes/Services.jsx";
 import Test from "./Routes/Test.jsx";
 import Contact from "./Routes/Contact.jsx";
+import Events from "./Routes/Events.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="services" element={<Services />} />
         <Route path="contacts" element={<Contact />} />
+        <Route path="events" element={<Events />} />
         <Route path="test" element={<Test />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

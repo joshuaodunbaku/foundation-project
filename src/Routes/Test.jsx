@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import EventPopup from "../Components/EventPopupPage";
 
 const ProgramsContainer = styled.div`
   max-width: 1200px;
@@ -70,54 +71,59 @@ const Button = styled.a`
 
 const Test = () => {
   return (
-    <ProgramsContainer>
-      <Title>Programs & Services</Title>
-      <Subtitle>Support for Parents in Need</Subtitle>
-      <p>
-        Are You Pregnant or Have Young Children? Struggling Financially? We’re
-        Here to Help!
-      </p>
+    <>
+      <EventPopup />
+      <ProgramsContainer>
+        <Title>Programs & Services</Title>
+        <Subtitle>Support for Parents in Need</Subtitle>
+        <p>
+          Are You Pregnant or Have Young Children? Struggling Financially? We’re
+          Here to Help!
+        </p>
 
-      <Section>
-        <h3>Healthcare Support</h3>
-        <List>
-          <ListItem>Access to affordable prenatal and pediatric care</ListItem>
-          <ListItem>Free health check-ups and vaccinations</ListItem>
-          <ListItem>Nutritional support and advice</ListItem>
-        </List>
-      </Section>
+        <Section>
+          <h3>Healthcare Support</h3>
+          <List>
+            <ListItem>
+              Access to affordable prenatal and pediatric care
+            </ListItem>
+            <ListItem>Free health check-ups and vaccinations</ListItem>
+            <ListItem>Nutritional support and advice</ListItem>
+          </List>
+        </Section>
 
-      <Section>
-        <h3>Emotional & Mental Health</h3>
-        <List>
-          <ListItem>Stress and anxiety management workshops</ListItem>
-          <ListItem>Access to counseling and mental health services</ListItem>
-          <ListItem>Parenting support groups</ListItem>
-        </List>
-      </Section>
+        <Section>
+          <h3>Emotional & Mental Health</h3>
+          <List>
+            <ListItem>Stress and anxiety management workshops</ListItem>
+            <ListItem>Access to counseling and mental health services</ListItem>
+            <ListItem>Parenting support groups</ListItem>
+          </List>
+        </Section>
 
-      <ContactSection>
-        <h3>Join Us Today</h3>
-        <ContactInfo>
-          <strong>Date & Time:</strong> Every Saturday, 10 AM - 12 Noon
-        </ContactInfo>
-        <ContactInfo>
-          <strong>Location:</strong> Online
-        </ContactInfo>
-        <ContactInfo>
-          <strong>Phone:</strong> 07460716648
-        </ContactInfo>
-        <ContactInfo>
-          <strong>Email:</strong> kiddies.mecareroot@yahoo.com
-        </ContactInfo>
-        <Button
-          href="https://www.eventbrite.com/e/support-for-parents-in-need-tickets-943741465127"
-          target="_blank"
-        >
-          Register Here
-        </Button>
-      </ContactSection>
-    </ProgramsContainer>
+        <ContactSection>
+          <h3>Join Us Today</h3>
+          <ContactInfo>
+            <strong>Date & Time:</strong> Every Saturday, 10 AM - 12 Noon
+          </ContactInfo>
+          <ContactInfo>
+            <strong>Location:</strong> Online
+          </ContactInfo>
+          <ContactInfo>
+            <strong>Phone:</strong> 07460716648
+          </ContactInfo>
+          <ContactInfo>
+            <strong>Email:</strong> kiddies.mecareroot@yahoo.com
+          </ContactInfo>
+          <Button
+            href="https://www.eventbrite.com/e/support-for-parents-in-need-tickets-943741465127"
+            target="_blank"
+          >
+            Register Here
+          </Button>
+        </ContactSection>
+      </ProgramsContainer>
+    </>
   );
 };
 
