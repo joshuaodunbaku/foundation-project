@@ -1,34 +1,32 @@
 import React from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import IMAGES from "../assets/images";
 import AnimatedCard from "../Components/AnimatedCard";
-import { BsCalendarEvent } from "react-icons/bs";
-import { FaClock, FaLocationPin } from "react-icons/fa6";
+import { FaClock } from "react-icons/fa6";
+import { FcCalendar } from "react-icons/fc";
+import { MdLocationPin } from "react-icons/md";
 
 const events = [
   {
     title: "Support for Parents in Need",
-    date: "Every Saturday, 10 AM - 12 Noon",
+    date: "June - 7th, 14th, 21st,28th",
     location:
       " Davis Estate Community Centre (DERAC) Barberry Ave, Chatham. Me5 9te.",
     time: "1.30 pm - 5.30pm",
-    link: "/",
     image: IMAGES.image_1,
   },
   {
     title: "Community Mental Health Workshop",
-    date: "March 20, 2025, 2 PM - 4 PM",
+    date: "March 20, 2025",
     location: " Local Community Center",
     time: "1.30 pm - 5.30pm",
-    link: "/",
     image: IMAGES.image_2,
   },
   {
     title: "Nutrition & Wellness Seminar",
-    date: "April 5, 2025, 10 AM - 1 PM",
-    location: " Health Center Hall",
+    date: "May- 3rd, 10th, 17th, 24th and 31st",
+    location: " Maidstone",
     time: "1.30 pm - 5.30pm",
-    link: "/",
     image: IMAGES.image_3,
   },
 ];
@@ -55,22 +53,19 @@ const Events = () => {
                   <Card.Title>{event.title}</Card.Title>
                   <Card.Text>
                     <strong>
-                      <BsCalendarEvent /> {event.date}
+                      <FcCalendar className="me-1" /> {event.date}
                     </strong>
                     <br />
                     <span>
-                      <FaLocationPin />
+                      <MdLocationPin className="me-1" />
                       {event.location}
                     </span>{" "}
                     <br />
                     <span>
-                      <FaClock />
+                      <FaClock className="me-1" />
                       {event.time}
                     </span>
                   </Card.Text>
-                  <Button variant="success" href={event.link} target="_blank">
-                    Learn More
-                  </Button>
                 </Card.Body>
                 <Card.Footer>
                   <small clas>Parking ais available on the street.</small>

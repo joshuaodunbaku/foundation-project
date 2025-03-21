@@ -1,31 +1,34 @@
 import { useEffect, useState } from "react";
 import { Modal, Carousel, Button } from "react-bootstrap";
 import IMAGES from "../assets/images";
+import { HiLink } from "react-icons/hi";
+import { FcCalendar } from "react-icons/fc";
+import { MdLocationPin } from "react-icons/md";
+import { LiaTimesSolid } from "react-icons/lia";
 
 const EventPopup = () => {
   const [show, setShow] = useState(false);
 
-  // Sample events array
   const events = [
     {
       title: "Free Health Check-Up",
       date: "March 15, 2025 - 9 AM",
-      location: "🏥 Community Center, Medway",
-      link: "https://www.eventbrite.com/e/free-health-checkup-tickets-123456789",
+      location: "Community Center, Medway",
+      link: "/events",
       image: IMAGES.image_1,
     },
     {
       title: "Parenting Workshop",
       date: "April 10, 2025 - 2 PM",
-      location: "📍 Local Library, London",
-      link: "https://www.eventbrite.com/e/parenting-workshop-tickets-987654321",
+      location: "Local Library, London ",
+      link: "/events",
       image: IMAGES.image_2,
     },
     {
       title: "Support for Parents in Need",
       date: "Every Saturday, 10 AM - 12 Noon",
-      location: "🌍 Online Event",
-      link: "https://www.eventbrite.com/e/support-for-parents-in-need-tickets-943741465127",
+      location: "Online Event",
+      link: "/events",
       image: IMAGES.image_3,
     },
   ];
@@ -65,17 +68,21 @@ const EventPopup = () => {
               />
               <Carousel.Caption className="bg-dark bg-opacity-75 p-3 rounded">
                 <h5>{event.title}</h5>
-                <p>📅 {event.date}</p>
-                <p>{event.location}</p>
                 <p>
-                  <a
-                    href={event.link}
+                  <FcCalendar className="me-1" /> {event.date}
+                </p>
+                <p>
+                  <MdLocationPin className="me-1" />
+                  {event.location}
+                </p>
+                <p>
+                  <Button
                     className="btn btn-success"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    🔗 Register Here
-                  </a>
+                    <HiLink /> Learn More
+                  </Button>
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
@@ -84,7 +91,7 @@ const EventPopup = () => {
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={() => setShow(false)}>
-          ❌ Close
+          <LiaTimesSolid /> Close
         </Button>
       </Modal.Footer>
     </Modal>
